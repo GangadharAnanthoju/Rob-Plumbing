@@ -1,0 +1,57 @@
+{
+  "categories": [
+    {
+      "name": "Emergency & Call-Out",
+      "items": [
+        { "name": "After-Hours Emergency Call-Out", "price": "$150–$250", "description": "Nights, weekends & public holidays." },
+        { "name": "Standard Call-Out Fee", "price": "$90", "description": "Business hours, Mon–Fri." },
+        { "name": "Urgent Same-Day Service", "price": "$120", "description": "Priority booking during business hours." }
+      ]
+    },
+    {
+      "name": "Leak Detection & Repair",
+      "items": [
+        { "name": "Leak Detection (Thermal/Acoustic)", "price": "$150–$300", "description": "Non-invasive precision leak location." },
+        { "name": "Minor Tap / Fitting Leak Repair", "price": "$90–$150", "description": "Washer, O-ring, or fitting replacement." },
+        { "name": "Pipe Leak Repair", "price": "$150–$400", "description": "Depends on access and pipe material." },
+        { "name": "Flexi Hose Replacement", "price": "$90–$150", "description": "Urgent safety replacement — all under sinks." }
+      ]
+    },
+    {
+      "name": "Drain Cleaning",
+      "items": [
+        { "name": "Blocked Sink / Basin / Shower", "price": "$100–$180", "description": "Hand or machine clearing." },
+        { "name": "Blocked Toilet", "price": "$120–$200", "description": "Includes plunger and snake clearing." },
+        { "name": "CCTV Drain Inspection", "price": "$200–$350", "description": "Camera inspection with full report." },
+        { "name": "High-Pressure Water Jetting", "price": "$250–$500", "description": "Root and debris clearing, deep clean." }
+      ]
+    },
+    {
+      "name": "Hot Water Systems",
+      "items": [
+        { "name": "Hot Water Service & Repair", "price": "$90–$200", "description": "Diagnosis and parts replacement." },
+        { "name": "Electric HWS Installation (std)", "price": "$800–$1,200", "description": "Supply and install, standard location." },
+        { "name": "Gas HWS Installation", "price": "$900–$1,400", "description": "Includes gas line connection." },
+        { "name": "Heat Pump HWS Installation", "price": "$1,800–$3,500", "description": "Energy-efficient supply & install." }
+      ]
+    },
+    {
+      "name": "Bathroom & Kitchen",
+      "items": [
+        { "name": "Tap / Mixer Replacement", "price": "$120–$250", "description": "Supply and install, per tap." },
+        { "name": "Toilet Suite Installation", "price": "$250–$450", "description": "Supply and install new toilet suite." },
+        { "name": "Shower Head / Diverter", "price": "$90–$200", "description": "Replace or upgrade shower fittings." },
+        { "name": "Full Bathroom Fit-Out", "price": "From $2,500", "description": "Quote provided after on-site inspection." }
+      ]
+    },
+    {
+      "name": "Pipes & General Plumbing",
+      "items": [
+        { "name": "Pipe Repair (Minor)", "price": "$120–$300", "description": "Single section repair or patch." },
+        { "name": "Repiping (per metre)", "price": "$80–$150", "description": "Copper or PEX supply line replacement." },
+        { "name": "Water Meter Inspection", "price": "$90–$180", "description": "Identify if meter is running unexpectedly." },
+        { "name": "General Labour Rate", "price": "$95/hr", "description": "For jobs not listed — minimum 1 hour." }
+      ]
+    }
+  ]
+}

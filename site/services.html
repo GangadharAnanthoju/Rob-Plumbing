@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rob's Plumbing services and pricing — emergency call-outs, drain cleaning, hot water systems, leak repair, and more." />
+  <title>Services & Pricing | Rob's Plumbing</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/Rob-Pummbing-Logo.png" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body>
+
+<nav class="nav scrolled" id="main-nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/images/logo/Rob-Pummbing-Logo.png" alt="Rob's Plumbing" class="nav__logo-img" />
+    </a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services & Pricing</a>
+      <a href="barbers.html">About Rob</a>
+      <a href="gallery.html">Our Work</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="btn btn-outline nav__book" onclick="openChat()">Get a Quote</button>
+    <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__mobile" id="mobile-menu">
+  <button class="nav__mobile-close" id="mobile-close">✕</button>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services & Pricing</a>
+  <a href="barbers.html">About Rob</a>
+  <a href="gallery.html">Our Work</a>
+  <a href="contact.html">Contact</a>
+  <button class="btn btn-gold" style="margin-top:1rem;" onclick="openChat()">Get a Quote</button>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="label">What We Do</div>
+    <h1>Services & Pricing</h1>
+    <p>Transparent pricing, no surprises. All residential plumbing — emergency to full fit-out.</p>
+  </div>
+</div>
+
+<!-- Service Cards -->
+<section class="section section--darker">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Our Services</div>
+      <h2>What Rob Handles</h2>
+    </div>
+    <div class="services-grid" id="services-full"></div>
+  </div>
+</section>
+
+<!-- Full Pricing -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Price Guide</div>
+      <h2>Full Pricing Menu</h2>
+      <p>Prices are guides — exact quotes are provided before any work starts. No hidden fees, ever.</p>
+    </div>
+    <div class="pricing-section" id="pricing-full"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="label" style="justify-content:center;">Ready to Book?</div>
+    <h2>Get Your Quote Now</h2>
+    <p>Chat with our AI assistant for a quick quote, or call Rob directly for emergency jobs.</p>
+    <button class="btn btn-gold" onclick="openChat()">Chat & Get a Quote</button>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="footer__brand-name">Rob's Plumbing</span>
+        <p>Licensed residential plumber. Emergency call-outs, leak repair, drain cleaning, hot water systems, and more.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services & Pricing</a></li>
+          <li><a href="barbers.html">About Rob</a></li>
+          <li><a href="gallery.html">Our Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Emergency Plumbing</a></li>
+          <li><a href="services.html">Leak Detection</a></li>
+          <li><a href="services.html">Drain Cleaning</a></li>
+          <li><a href="services.html">Hot Water Systems</a></li>
+          <li><a href="services.html">Bathroom & Kitchen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Hours</h4>
+        <div class="footer__hours-row"><span>Mon – Fri</span><span>7am – 5pm</span></div>
+        <div class="footer__hours-row"><span>Saturday</span><span>8am – 2pm</span></div>
+        <div class="footer__hours-row"><span>Emergency</span><span>24 / 7</span></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 Rob's Plumbing. All rights reserved. · <a href="legal.html" style="color:var(--text-dim);">Legal</a></span>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="chat-toggle" id="chat-toggle" title="Get a Quote">🔧</button>
+<div class="chat-window" id="chat-window">
+  <div class="chat-header">
+    <div class="chat-header__avatar">RP</div>
+    <div class="chat-header__info">
+      <div class="chat-header__name">Rob's Plumbing Assistant</div>
+      <div class="chat-header__status">Online — ready to help</div>
+    </div>
+    <button class="chat-header__close" id="chat-close">✕</button>
+  </div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="chat-quick-replies" id="quick-replies"></div>
+  <div class="chat-input-area">
+    <textarea class="chat-input" id="chat-input" rows="1" placeholder="Describe your plumbing issue…"></textarea>
+    <button class="chat-send" id="chat-send">➤</button>
+  </div>
+  <div class="chat-footer">Powered by Rob's AI Assistant</div>
+</div>
+<div class="toast-container" id="toast-container"></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/chat-widget.js"></script>
+</body>
+</html>

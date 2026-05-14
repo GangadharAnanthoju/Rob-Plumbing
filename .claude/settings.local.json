@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(az --version 2>&1)",
+      "PowerShell(swa --version 2>&1)",
+      "PowerShell(az account show --query \"{subscription:name, id:id}\" --output table 2>&1)",
+      "PowerShell(az login)",
+      "Bash(az containerapp *)",
+      "Bash(az staticwebapp *)",
+      "Bash(git -C \"c:\\\\Data_AI\\\\projects\\\\Rob-Plumbing\" remote -v)",
+      "PowerShell(tree \"c:\\\\Data_AI\\\\projects\\\\Rob-Plumbing\" /L /D 2>$null)",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Data_AI\\\\projects\\\\Rob-Plumbing\" | Where-Object { -not $_.Name.StartsWith\\('.'\\) -and $_.Name -ne \"node_modules\" } | ForEach-Object { $_.FullName })"
+    ]
+  }
+}

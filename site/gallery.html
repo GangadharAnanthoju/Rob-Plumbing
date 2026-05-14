@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rob's Plumbing — our work gallery. Drain cleaning, hot water systems, leak repairs, and bathroom fit-outs." />
+  <title>Our Work | Rob's Plumbing</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/Rob-Pummbing-Logo.png" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <style>
+    .gallery-full {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 320px;
+      gap: 6px;
+    }
+    .gallery-full .gallery-item--tall  { grid-row: span 2; }
+    .gallery-full .gallery-item--wide  { grid-column: span 2; }
+    @media (max-width: 900px) {
+      .gallery-full { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 260px; }
+      .gallery-full .gallery-item--wide { grid-column: span 1; }
+    }
+    @media (max-width: 520px) {
+      .gallery-full { grid-template-columns: 1fr; grid-auto-rows: 240px; }
+      .gallery-full .gallery-item--tall { grid-row: span 1; }
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.5rem 1.25rem 1rem;
+      background: linear-gradient(transparent, rgba(10,22,40,0.85));
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<nav class="nav scrolled" id="main-nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/images/logo/Rob-Pummbing-Logo.png" alt="Rob's Plumbing" class="nav__logo-img" />
+    </a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services & Pricing</a>
+      <a href="barbers.html">About Rob</a>
+      <a href="gallery.html" class="active">Our Work</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="btn btn-outline nav__book" onclick="openChat()">Get a Quote</button>
+    <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__mobile" id="mobile-menu">
+  <button class="nav__mobile-close" id="mobile-close">✕</button>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services & Pricing</a>
+  <a href="barbers.html">About Rob</a>
+  <a href="gallery.html">Our Work</a>
+  <a href="contact.html">Contact</a>
+  <button class="btn btn-gold" style="margin-top:1rem;" onclick="openChat()">Get a Quote</button>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="label">Recent Jobs</div>
+    <h1>Our Work</h1>
+    <p>A selection of completed plumbing jobs — emergency repairs, installations, and fit-outs.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="gallery-full">
+
+      <div class="gallery-item gallery-item--tall">
+        <img src="assets/images/gallery/gallery-02.png" alt="Hot water system installation" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="gallery-caption">Hot Water Install</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/gallery/gallery-05.png" alt="Drain cleaning job" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="gallery-caption">Drain Cleaning</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/gallery/gallery-08.png" alt="Pipe repair" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="gallery-caption">Pipe Repair</div>
+      </div>
+
+      <div class="gallery-item gallery-item--wide">
+        <img src="assets/images/gallery/gallery-07.png" alt="Bathroom fit-out" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="gallery-caption">Bathroom Fit-Out</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/gallery/gallery-04.png" alt="Professional plumbing tools" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="gallery-caption">The Tools</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/gallery/gallery-06.png" alt="Leak detection job" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="gallery-caption">Leak Detection</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/gallery/gallery-09.png" alt="Kitchen plumbing" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="gallery-caption">Kitchen Plumbing</div>
+      </div>
+
+      <div class="gallery-item gallery-item--wide">
+        <img src="assets/images/gallery/gallery-10.png" alt="Completed plumbing job" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="gallery-caption">Job Complete</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/gallery/gallery-01.png" alt="Emergency plumbing repair" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="gallery-caption">Emergency Repair</div>
+      </div>
+
+      <div class="gallery-item gallery-item--wide">
+        <img src="assets/images/gallery/gallery-11.png" alt="Plumbing job completed" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="gallery-caption">Quality Workmanship</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/images/gallery/gallery-12.png" alt="Plumbing installation" loading="lazy" />
+        <div class="gallery-item__overlay">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="gallery-caption">Professional Install</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <div class="label" style="justify-content:center;">Like What You See?</div>
+    <h2>Get Rob on Your Job</h2>
+    <p>Upfront pricing, professional work, and a guarantee on every job. Chat to get a quote today.</p>
+    <button class="btn btn-gold" onclick="openChat()">Get a Quote</button>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="footer__brand-name">Rob's Plumbing</span>
+        <p>Licensed residential plumber. Emergency call-outs, leak repair, drain cleaning, hot water systems, and more.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services & Pricing</a></li>
+          <li><a href="barbers.html">About Rob</a></li>
+          <li><a href="gallery.html">Our Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Emergency Plumbing</a></li>
+          <li><a href="services.html">Leak Detection</a></li>
+          <li><a href="services.html">Drain Cleaning</a></li>
+          <li><a href="services.html">Hot Water Systems</a></li>
+          <li><a href="services.html">Bathroom & Kitchen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Hours</h4>
+        <div class="footer__hours-row"><span>Mon – Fri</span><span>7am – 5pm</span></div>
+        <div class="footer__hours-row"><span>Saturday</span><span>8am – 2pm</span></div>
+        <div class="footer__hours-row"><span>Emergency</span><span>24 / 7</span></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 Rob's Plumbing. All rights reserved. · <a href="legal.html" style="color:var(--text-dim);">Legal</a></span>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="chat-toggle" id="chat-toggle" title="Get a Quote">🔧</button>
+<div class="chat-window" id="chat-window">
+  <div class="chat-header">
+    <div class="chat-header__avatar">RP</div>
+    <div class="chat-header__info">
+      <div class="chat-header__name">Rob's Plumbing Assistant</div>
+      <div class="chat-header__status">Online — ready to help</div>
+    </div>
+    <button class="chat-header__close" id="chat-close">✕</button>
+  </div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="chat-quick-replies" id="quick-replies"></div>
+  <div class="chat-input-area">
+    <textarea class="chat-input" id="chat-input" rows="1" placeholder="Describe your plumbing issue…"></textarea>
+    <button class="chat-send" id="chat-send">➤</button>
+  </div>
+  <div class="chat-footer">Powered by Rob's AI Assistant</div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightbox-close">✕</button>
+  <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/chat-widget.js"></script>
+</body>
+</html>

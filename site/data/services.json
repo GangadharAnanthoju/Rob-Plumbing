@@ -1,0 +1,50 @@
+[
+  {
+    "id": "emergency",
+    "name": "Emergency Plumbing",
+    "icon": "🚨",
+    "description": "24/7 emergency response for burst pipes, severe leaks, and flooding. We're there when you need us most.",
+    "startingFrom": "From $150",
+    "duration": "1–3 hrs"
+  },
+  {
+    "id": "leak",
+    "name": "Leak Detection & Repair",
+    "icon": "💧",
+    "description": "Find and fix hidden leaks fast — walls, ceilings, slabs, or underground. Minimise damage before it spreads.",
+    "startingFrom": "From $90",
+    "duration": "1–2 hrs"
+  },
+  {
+    "id": "drain",
+    "name": "Drain Cleaning",
+    "icon": "🌀",
+    "description": "Unblock slow or fully blocked drains with professional-grade equipment. Kitchen, bathroom, or main sewer lines.",
+    "startingFrom": "From $100",
+    "duration": "1–2 hrs"
+  },
+  {
+    "id": "hotwater",
+    "name": "Hot Water Systems",
+    "icon": "🔥",
+    "description": "Installation, repair, and replacement of electric, gas, and heat pump hot water systems. All major brands.",
+    "startingFrom": "From $120",
+    "duration": "1–4 hrs"
+  },
+  {
+    "id": "bathroom",
+    "name": "Bathroom & Kitchen",
+    "icon": "🚿",
+    "description": "Tap replacements, toilet installs, shower upgrades, and full bathroom fit-outs completed to a high standard.",
+    "startingFrom": "From $95",
+    "duration": "1–3 hrs"
+  },
+  {
+    "id": "pipes",
+    "name": "Pipe Repair & Repiping",
+    "icon": "🔧",
+    "description": "From single pipe repairs to full repiping of your home. Copper, PEX, and PVC — installed to code.",
+    "startingFrom": "From $100",
+    "duration": "2–6 hrs"
+  }
+]

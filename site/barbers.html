@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet Rob — licensed master plumber with 15 years of residential plumbing experience." />
+  <title>About Rob | Rob's Plumbing</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/Rob-Pummbing-Logo.png" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <style>
+    /* ---- About Rob Profile ---- */
+    .plumber-profile {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .plumber-profile__photo {
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-card-2);
+      min-height: 520px;
+    }
+    .plumber-profile__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      filter: brightness(0.92);
+      transition: filter 0.4s;
+    }
+    .plumber-profile:hover .plumber-profile__photo img { filter: brightness(1); }
+    .plumber-profile__photo-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--bg-card);
+    }
+    .plumber-profile__photo-placeholder-initials {
+      font-size: 6rem;
+      font-weight: 900;
+      color: var(--gold);
+      opacity: 0.12;
+      line-height: 1;
+    }
+    .plumber-profile__photo-placeholder-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .plumber-profile__photo-badge {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: rgba(10,22,40,0.88);
+      border: 1px solid var(--gold-border);
+      border-radius: 3px;
+      padding: 0.5rem 1rem;
+      backdrop-filter: blur(8px);
+    }
+    .plumber-profile__photo-badge-num {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      opacity: 0.6;
+      text-transform: uppercase;
+    }
+    .plumber-profile__photo-badge-name {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .plumber-profile__body {
+      padding: 3.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+      background: var(--bg-card);
+    }
+    .plumber-profile__name {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
+      line-height: 1;
+    }
+    .plumber-profile__role {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .plumber-profile__role::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.5;
+    }
+    .plumber-profile__tagline {
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--text-muted);
+      letter-spacing: 0.01em;
+      line-height: 1.5;
+      padding-left: 1rem;
+      border-left: 2px solid var(--gold-border);
+    }
+    .plumber-profile__bio {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      max-width: 520px;
+    }
+    .plumber-profile__meta {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .plumber-profile__meta-label {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 0.25rem;
+    }
+    .plumber-profile__meta-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .plumber-profile__specialties-label {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 0.6rem;
+    }
+
+    /* Credentials grid */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-top: 3rem;
+    }
+    .credential-item {
+      background: var(--bg-card);
+      padding: 2rem 1.75rem;
+      text-align: center;
+    }
+    .credential-item__icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .credential-item__title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+    .credential-item__desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .plumber-profile { grid-template-columns: 1fr; }
+      .plumber-profile__photo { min-height: 380px; }
+      .plumber-profile__body { padding: 2.5rem 2rem; }
+      .credentials-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .plumber-profile__photo { min-height: 300px; }
+      .plumber-profile__body { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav scrolled" id="main-nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/images/logo/Rob-Pummbing-Logo.png" alt="Rob's Plumbing" class="nav__logo-img" />
+    </a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services & Pricing</a>
+      <a href="barbers.html" class="active">About Rob</a>
+      <a href="gallery.html">Our Work</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="btn btn-outline nav__book" onclick="openChat()">Get a Quote</button>
+    <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="nav__mobile" id="mobile-menu">
+  <button class="nav__mobile-close" id="mobile-close">✕</button>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services & Pricing</a>
+  <a href="barbers.html">About Rob</a>
+  <a href="gallery.html">Our Work</a>
+  <a href="contact.html">Contact</a>
+  <button class="btn btn-gold" style="margin-top:1rem;" onclick="openChat()">Get a Quote</button>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="label">Your Plumber</div>
+    <h1>About Rob</h1>
+    <p>Licensed, experienced, and straight-talking — this is who shows up at your door.</p>
+  </div>
+</div>
+
+<!-- Rob's Profile -->
+<section class="section section--darker">
+  <div class="container">
+
+    <div class="plumber-profile">
+      <div class="plumber-profile__photo">
+        <img src="assets/images/team/Rob.jpg" alt="Rob — Master Plumber" />
+        <div class="plumber-profile__photo-badge">
+          <div class="plumber-profile__photo-badge-num">Master Plumber</div>
+          <div class="plumber-profile__photo-badge-name">Rob</div>
+        </div>
+      </div>
+
+      <div class="plumber-profile__body">
+        <div class="plumber-profile__name">Rob</div>
+        <div class="plumber-profile__role">Master Plumber &nbsp;·&nbsp; Owner &nbsp;·&nbsp; 15 Years Experience</div>
+        <div class="plumber-profile__tagline">"Reliable. Honest. Done Right."</div>
+
+        <p class="plumber-profile__bio">
+          Rob is a licensed master plumber with over 15 years of hands-on experience in residential plumbing.
+          He built his reputation the hard way — showing up on time, charging fair prices, and never leaving
+          a job until it's done properly.
+        </p>
+        <p class="plumber-profile__bio">
+          Whether it's a burst pipe at 2am, a stubborn blocked drain, or a full bathroom renovation,
+          Rob brings the same level of care and expertise. No apprentices, no subcontractors — when you book
+          Rob's Plumbing, Rob is the one who turns up.
+        </p>
+
+        <div class="plumber-profile__meta">
+          <div>
+            <div class="plumber-profile__meta-label">Experience</div>
+            <div class="plumber-profile__meta-value">15+ Years</div>
+          </div>
+          <div>
+            <div class="plumber-profile__meta-label">Licence</div>
+            <div class="plumber-profile__meta-value">Master Plumber</div>
+          </div>
+          <div>
+            <div class="plumber-profile__meta-label">Jobs Completed</div>
+            <div class="plumber-profile__meta-value">1,000+</div>
+          </div>
+          <div>
+            <div class="plumber-profile__meta-label">Rating</div>
+            <div class="plumber-profile__meta-value">5.0 ★</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="plumber-profile__specialties-label">Specialties</div>
+          <div class="barber-card__tags">
+            <span class="tag">Emergency Plumbing</span>
+            <span class="tag">Leak Detection</span>
+            <span class="tag">Drain Cleaning</span>
+            <span class="tag">Hot Water Systems</span>
+            <span class="tag">Bathroom Fit-Outs</span>
+            <span class="tag">Pipe Repair & Repiping</span>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn btn-gold" style="font-size:0.7rem;" onclick="openChat()">
+            Get a Quote from Rob
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Credentials -->
+    <div class="credentials-grid">
+      <div class="credential-item">
+        <div class="credential-item__icon">🪪</div>
+        <div class="credential-item__title">Fully Licensed</div>
+        <p class="credential-item__desc">Holds a current Master Plumber licence. All work complies with local plumbing codes and standards.</p>
+      </div>
+      <div class="credential-item" style="border-left:1px solid var(--gold-border); border-right:1px solid var(--gold-border);">
+        <div class="credential-item__icon">🛡️</div>
+        <div class="credential-item__title">Fully Insured</div>
+        <p class="credential-item__desc">Public liability and professional indemnity insurance in place. Your home is protected.</p>
+      </div>
+      <div class="credential-item">
+        <div class="credential-item__icon">✅</div>
+        <div class="credential-item__title">Workmanship Guarantee</div>
+        <p class="credential-item__desc">All work is guaranteed. If something isn't right, Rob comes back and fixes it — no charge.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="label" style="justify-content:center;">Ready to Book?</div>
+    <h2>Get Rob on the Job</h2>
+    <p>Chat with our assistant or call Rob directly. Fast response, upfront pricing, no obligation.</p>
+    <button class="btn btn-gold" onclick="openChat()">Chat & Get a Quote</button>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="footer__brand-name">Rob's Plumbing</span>
+        <p>Licensed residential plumber. Emergency call-outs, leak repair, drain cleaning, hot water systems, and more.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services & Pricing</a></li>
+          <li><a href="barbers.html">About Rob</a></li>
+          <li><a href="gallery.html">Our Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Emergency Plumbing</a></li>
+          <li><a href="services.html">Leak Detection</a></li>
+          <li><a href="services.html">Drain Cleaning</a></li>
+          <li><a href="services.html">Hot Water Systems</a></li>
+          <li><a href="services.html">Bathroom & Kitchen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Hours</h4>
+        <div class="footer__hours-row"><span>Mon – Fri</span><span>7am – 5pm</span></div>
+        <div class="footer__hours-row"><span>Saturday</span><span>8am – 2pm</span></div>
+        <div class="footer__hours-row"><span>Emergency</span><span>24 / 7</span></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 Rob's Plumbing. All rights reserved. · <a href="legal.html" style="color:var(--text-dim);">Legal</a></span>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="chat-toggle" id="chat-toggle" title="Get a Quote">🔧</button>
+<div class="chat-window" id="chat-window">
+  <div class="chat-header">
+    <div class="chat-header__avatar">RP</div>
+    <div class="chat-header__info">
+      <div class="chat-header__name">Rob's Plumbing Assistant</div>
+      <div class="chat-header__status">Online — ready to help</div>
+    </div>
+    <button class="chat-header__close" id="chat-close">✕</button>
+  </div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="chat-quick-replies" id="quick-replies"></div>
+  <div class="chat-input-area">
+    <textarea class="chat-input" id="chat-input" rows="1" placeholder="Describe your plumbing issue…"></textarea>
+    <button class="chat-send" id="chat-send">➤</button>
+  </div>
+  <div class="chat-footer">Powered by Rob's AI Assistant</div>
+</div>
+<div class="toast-container" id="toast-container"></div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/chat-widget.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "rob",
+    "name": "Rob",
+    "role": "Master Plumber & Owner",
+    "tagline": "Reliable. Honest. Done Right.",
+    "bio": "Rob is a licensed master plumber with over 15 years of hands-on experience in residential plumbing. Known for clear communication, upfront pricing, and getting the job done right the first time — no call-backs, no surprises.",
+    "photo": "assets/images/team/rob.png",
+    "initials": "RP",
+    "specialties": ["Emergency Plumbing", "Leak Detection", "Drain Cleaning", "Hot Water Systems"],
+    "experience": "15 Years"
+  }
+]
